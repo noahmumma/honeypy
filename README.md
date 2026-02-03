@@ -4,44 +4,29 @@
 
 
 <h1>Building an SSH and HTTP honeypot using Python</h1>
-This tutorial shows how the honeypot functions and .<br />
+This tutorial shows the functions and logs of the SSH and HTTP honeypots.<br />
 
-<h2>The Four Questions</h2>
-1. What is the date of this network traffic?
+<h2>What is a honeypot?</h2>
+A honeypot is a cybersecurity tool that lures threat actors to attack it instead of legitimate targets. It can be modeled just like a regular, important digital asset, designed to look very convincing to attackers. However, it contains nothing of value to the organization.   
 </p> 
-2. Which downloaded files were infected, and what are their file hashes?
-</p>
-3. What is the domain name that delivered the exploit kit and malware?
-</p>
-4. What is the IP address, MAC address, and host name of the infected machine?
-
-<h2>What is Wireshark?</h2>
-Wireshark is a tool that presents captured packet data in a digestible format, allowing a security team to analyze it effectively. It's known as a "network packet analyzer" (NPA).  
+Think of it as two houses. A threat actor sees two houses that look the exact same, but one has the door unlocked. The threat actor goes to that house, as it provides no defenses against an attack. But once inside, the attacker finds that there is nothing of value within it. And on top of that, there are plenty of tools inside that record everything about the attacker. 
 </p> 
-Imagine an NPA as a tool to help examine exactly what's happening inside a network cable. Whenever a packet is sent through the network cable, Wireshark can present that data to an analyst, showing them everything about it. 
-</p> 
-But this is not limited to just analysts. Network administrators can use this to troubleshoot network problems, developers can use it to debug protocol implementations, and engineers can use it to examine security problems. 
-
+The second benefit of a honeypot, besides distracting attackers, is its ability to be built to record information about attackers. Once a threat actor is inside, the honeypot records their IP address, port number, username and password used to get in, commands used, sites visited, and more. The honeypots' benefit is learning more about threat actors, while also keeping them away from your valuable assets. 
 
 <h2>Environments and Technologies Used</h2>
 
-- Kali Linux
 - VMware Workstation
 - Visual Studio Code
 - Python 13.2
 
 <h2>Operating Systems Used </h2>
 
-- Linux 6.18
+- Windows 24H2
 
-<h2>High-Level Deployment Steps</h2>
+<h2>What Will Be Shown.</h2>
+For this post, I will only be showing the terminal responses of the honeypot, the HTTP page, and the logs that I receive from my interactions with the honeypot.  
 
-- Step 1: Change the format of the "Time Column" to reveal the date.
-- Step 2: Filter packets to just "http.request", use "md5sum" to get the hash values from those that contained executables, run them through virustotal[.]com to find which are malicious.
-- Step 3: Head back to the content type section of the executable files, and further inspect them to find the hostname. 
-- Step 4: Clear all filters, then apply "Dynamic Host Configuration Protocol" as a filter,  select "User Datagram Protocol", and scroll down to find the hostname, IP and MAC address of the infected machine. 
-
-<h2>Deployment and Configuration Steps</h2>
+<h2>SSH Honeypot terminal</h2>
 
 <p>
 <img src="https://i.imgur.com/GxroCJH.jpeg" height="80%" width="80%" alt="Step 1"/>
