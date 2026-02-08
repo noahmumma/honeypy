@@ -132,3 +132,35 @@ Once either honeypot is running, activity is logged in real time. These logs can
 </p>
 This project shows hands-on experience for understanding attacker behavior and integrating deception-based security techniques into a defensive strategy
 
+<h1>Screenshots</h1>
+Here are some screenshots of the SSH and HTTP honeypots, as well as the loggers.
+
+<p>
+<img src="https://i.imgur.com/RVUXRob.jpeg" height="80%" width="80%" alt="Step 1"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/RrGSsdh.jpeg" height="80%" width="80%" alt="Step 1"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/UbBMppk.jpeg" height="80%" width="80%" alt="Step 1"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/mjoB61H.jpeg" height="80%" width="80%" alt="Step 1"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/JjwM3Fk.jpeg" height="80%" width="80%" alt="Step 1"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/XiEcADs.jpeg" height="80%" width="80%" alt="Step 1"/>
+</p>
+<p>
