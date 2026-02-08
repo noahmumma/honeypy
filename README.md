@@ -65,7 +65,7 @@ Once connected, attackers are presented with:</p>
 - An emulated shell environment</p>
 All authentication attempts are logged to audits.log, while executed commands are recorded in cmd_audits.log.
 </p>
-The emulated shell responds to common commands such as:
+The emulated shell responds to common commands such as:</p>
 - whoami</p>
 - pwd</p>
 - ls</p>
