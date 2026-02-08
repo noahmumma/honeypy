@@ -103,7 +103,8 @@ Once either honeypot is running, activity is logged in real time. These logs can
 - Reviewed manually</p>
 - Ingested into a SIEM</p>
 - Used for behavioral analysis</p>
-- Correlated with firewall or IDS alerts
+- Correlated with firewall or IDS alerts</p>
+<p>
 </p>
 This project shows hands-on experience for understanding attacker behavior and integrating deception-based security techniques into a defensive strategy
 
