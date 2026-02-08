@@ -94,7 +94,11 @@ For additional clarification, why am I using the IP address "127.0.0.1" and port
 Port number 2223 was chosen since it is a very common alternate SSH port that attackers often scan for. It will look believable to threat actors, who may believe it was a misconfigured SSH port, or admins trying to "hide" their SSH. 
 
 <h3>Step 5</h3>
-To start the HTTP honeypot, enter the command: python main.py -p 5000 --http
+To start the HTTP honeypot, enter the command: 
+
+```
+python main.py -p 5000 --http
+```
 </p>
 By default:
 
