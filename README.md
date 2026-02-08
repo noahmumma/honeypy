@@ -6,6 +6,9 @@
 <h1>Building an SSH and HTTP honeypot using Python in Visual Studio Code</h1>
 This project details the what, design, development, and deployment of a honeypot framework built in Python, capable of emulating both SSH and HTTP services. The goal of this project is to capture simulated attacker behavior, credentials, and commands in a controlled environment for learning purposes.<br />
 
+<h2>DISCLAIMER:</h2>
+This project is for educational and research purposes only. Do not deploy on networks you do not own or have explicit permission ot monitor. 
+
 <h2>What is a honeypot?</h2>
 A honeypot is a deliberately vulnerable system that lures threat actors to attack it instead of legitimate targets. It can be modeled just like a regular, important digital asset, designed to look very convincing to attackers. However, it contains nothing of value to the organization.   
 </p> 
