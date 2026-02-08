@@ -29,7 +29,7 @@ The second benefit of a honeypot, besides distracting attackers, is its ability 
 - Windows 24H2
 - Linux (recommended for deployment)
 
-<h2>Deployment and Configuration Steps.</h2>
+<h2>Deployment and Configuration Steps</h2>
 
 <h3>Step 1 </h3>
 Clone the repository and navigate to the project directory. Ensure Python 3 is installed and available in your PATH. 
@@ -103,6 +103,7 @@ Once either honeypot is running, activity is logged in real time. These logs can
 - Reviewed manually</p>
 - Ingested into a SIEM</p>
 - Used for behavioral analysis</p>
-- Correlated with firewall or IDS alerts</p>
+- Correlated with firewall or IDS alerts
+</p>
 This project shows hands-on experience for understanding attacker behavior and integrating deception-based security techniques into a defensive strategy
 
