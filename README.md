@@ -34,46 +34,60 @@ The second benefit of a honeypot, besides distracting attackers, is its ability 
 <h3>Step 1 </h3>
 Clone the repository and navigate to the project directory. Ensure Python 3 is installed and available in your PATH. 
 </p>
-Install the required dependencies with this command: pip install paramiko flask
+Install the required dependencies with this command: </p>
+
+```
+pip install paramiko flask
+```
 
 <h3>Step 2</h3>
-Generate an SSH host key for the SSH honeypot. This key is required for the Paramiko SSH server to function properly. 
-</p>
-Command: ssh-keygen -t rsa -f host.key
+Generate an SSH host key for the SSH honeypot. This key is required for the Paramiko SSH server to function properly. </p>
+
+```
+ssh-keygen -t rsa -f host.key
+```
 </p>
 Place the generated host.key in the same directory as the SSH honeypot script. 
 
 <h3>Step 3</h3>
-The project uses argument parsing to control how the honeypot runs. Using this, you can specify:</p> 
-- Listening address</p>
-- Port number</p>
-- Honeypot type (SSH or HTTP)</p>
-- Optional username and password 
+The project uses argument parsing to control how the honeypot runs. Using this, you can specify:
+
+- Listening address
+- Port number
+- Honeypot type (SSH or HTTP)
+- Optional username and password
 </p>
 This allows a single entry point to deploy multiple honeypot services without modifying the code.
 
 <h3>Step 4</h3>
-Now, to start the honeypot, enter this command: python main.py -a 127.0.0.1 -p --ssh
+Now, to start the honeypot, enter this command:</p>
+
+```
+python main.py -a 127.0.0.1 -p --ssh
+```
+
 </p>
 This command will slightly change based on your operating system (for example, macOS uses "python3" instead of just "python". Make sure you know the commands for your operating system before entering exactly what I have listed here. 
 </p>
 By default, the SSH honeypot accepts any username and password, allowing attackers to immediately access the fake shell. 
 </p>
-Once connected, attackers are presented with:</p>
-- A spoofed OpenSSH banner</p>
-- A fake system welcome message</p>
-- An emulated shell environment</p>
-All authentication attempts are logged to audits.log, while executed commands are recorded in cmd_audits.log.
+Once connected, attackers are presented with:
+
+- A spoofed OpenSSH banner
+- A fake system welcome message
+- An emulated shell environment
+- All authentication attempts are logged to audits.log, while executed commands are recorded in cmd_audits.log.
 </p>
-The emulated shell responds to common commands such as:</p>
-- whoami</p>
-- pwd</p>
-- ls</p>
-- cat</p>
-- mkdir</p>
-- rmdir</p>
-- cd</p>
-Any unknown commands are logged and return "command not found".
+The emulated shell responds to common commands such as:
+
+- whoami
+- pwd
+- ls
+- cat
+- mkdir
+- rmdir
+- cd
+- Any unknown commands are logged and return "command not found".
 </p>
 For additional clarification, why am I using the IP address "127.0.0.1" and port number "2223"? 127.0.0.1 limits the access of the honeypot to the local device, so only your machine will be able to access it. If you were using this in the professional space where you wanted to catch threat actors, you would use the IP address of "0.0.0.0", which allows anyone to access it. 
 </p> 
@@ -82,15 +96,17 @@ Port number 2223 was chosen since it is a very common alternate SSH port that at
 <h3>Step 5</h3>
 To start the HTTP honeypot, enter the command: python main.py -p 5000 --http
 </p>
-By default:</p>
-- Username: admin</p>
+By default:
+
+- Username: admin
 - Password: password
 </p>
 The honeypot hosts a fake WordPress admin login page and captures all submitted credentials.
 </p>
-Each login attempt records:</p>
-- Attacker IP address</p>
-- Submitted username</p>
+Each login attempt records:
+
+- Attacker IP address
+- Submitted username
 - Submitted password
 </p>
 All data is written to http_audtis.log using a rotating log handler.
@@ -99,11 +115,12 @@ The server listens on all interfaces (0.0.0.0), making it suitable for deploymen
 </p>
 
 <h3>Step 6</h3>
-Once either honeypot is running, activity is logged in real time. These logs can be:</p>
-- Reviewed manually</p>
-- Ingested into a SIEM</p>
-- Used for behavioral analysis</p>
-- Correlated with firewall or IDS alerts</p>
+Once either honeypot is running, activity is logged in real time. These logs can be:
+
+- Reviewed manually
+- Ingested into a SIEM
+- Used for behavioral analysis
+- Correlated with firewall or IDS alerts
 <p>
 </p>
 This project shows hands-on experience for understanding attacker behavior and integrating deception-based security techniques into a defensive strategy
