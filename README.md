@@ -136,11 +136,6 @@ This project shows hands-on experience for understanding attacker behavior and i
 Here are some screenshots of the SSH and HTTP honeypots, as well as the loggers.
 
 <p>
-<img src="https://i.imgur.com/RVUXRob.jpeg" height="80%" width="80%" alt="Step 1"/>
-</p>
-<p>
-
-<p>
 <img src="https://i.imgur.com/RrGSsdh.jpeg" height="80%" width="80%" alt="Step 1"/>
 </p>
 <p>
