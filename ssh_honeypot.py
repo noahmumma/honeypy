@@ -67,7 +67,7 @@ def emulated_shell(channel, client_ip):
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 elif cmd == "whoami":
-                    response = b"a fool\r\n"
+                    response = b"user\r\n"
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 elif cmd == "ls":
@@ -75,19 +75,19 @@ def emulated_shell(channel, client_ip):
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 elif cmd == "cat prvdoc.conf1":
-                    response = b"Why would I let you see this it's confidential\r\n"
+                    response = b"This information is unavailable\r\n"
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 elif cmd == "mkdir":
-                    response = b"LEBRRRRROOOONNNNN\r\n"
+                    response = b"Directory unable to be created\r\n"
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 elif cmd == "rmdir":
-                    response = b"Honestly I'm good.\r\n"
+                    response = b"Directory unable to be removed\r\n"
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 elif cmd == "cd":
-                    response = b"Compact Discs were created on October 1, 1982, starting in Japan\r\n"
+                    response = b"Cannot find path\r\n"
                     creds_logger.info(
                         f'Command {command.strip()}' + 'executed by' + f'{client_ip}')
                 else:
